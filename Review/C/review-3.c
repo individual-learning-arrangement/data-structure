@@ -10,6 +10,11 @@ int main() {
     scanf("%d", &N);
 
     int *arr = (int *)malloc(sizeof(int) * N);
+    if(arr == NULL) {
+        printf("arr 동적 할당 실패\n");
+        return 0;
+    }
+    
     for(int i = 0; i < N; i++)
         scanf("%d", &arr[i]);
 
